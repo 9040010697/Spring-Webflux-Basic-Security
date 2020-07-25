@@ -23,6 +23,7 @@ public class SecurityConfig {
         return new MapReactiveUserDetailsService(userDetails);
     }
 
+    @Bean
     public SecurityWebFilterChain securityWebFilterChain(ServerHttpSecurity http) {
         return http.csrf().disable()
                 .authorizeExchange()
